@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;900&display=swap");
+:root {
+  font-size: 60%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  --color-bg-primary: #fde7a9;
+  --color-bg-secondary: #fff;
+  --color-text-primary: #333;
+  --color-hr: #333;
+  --color-svg: #333;
+  --color-svg-hover: #999;
+}
+
+.tema {
+  --color-bg-primary: #292929;
+  --color-bg-secondary: #333;
+  --color-text-primary: #f0f0f0;
+  --color-hr: #999;
+  --color-svg: #f0f0f0;
+  --color-svg-hover: #777;
+}
+
+body {
+  background-color: var(--color-bg-primary); 
+  /* linear-gradient(
+    to right,
+    var(--color-bg-primary),
+    var(--color-bg-secondary)
+  ); */
+
+  font: 400 1.3rem "Montserrat", sans-serif;
+  color: var(--color-text-primary);
+
+  width: 100%;
+  height: 100%;
+  transition: color .6s ease, background-color .6s ease;
+}
+
+.corpo {
+  padding: 25px;
+  max-width: 550px;
+  margin: 0 auto;
+
+  display: block;
+  align-items: center;
+  justify-content: center;
+}
+
+/* CABEÇALHO
+-------------------------------------------- */
+.cabecalho {
+  padding-top: 5%;
+  text-align: center;
+  align-items: center;
+}
+
+.cabecalho .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cabecalho .row .links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin-right: 2.5rem;
+}
+
+.cabecalho .row .links a {
+  margin: 5px auto;
+  text-decoration: none;
+}
+
+.cabecalho .row .links a svg {
+  width: 25px;
+  height: 25px;
+  fill: var(--color-svg);
+  transition: fill .6s ease;
+}
+
+.cabecalho .row .links a:hover svg {
+  opacity: 0.7;
+  fill: var(--color-svg-hover);
+}
+
+.cabecalho .avatar {
+  width: 150px;
+  height: 150px;
+
+  background: url("/avatar.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  border: none;
+  border-radius: 75px;
+}
+
+.cabecalho h1 {
+  font-size: 3rem;
+  margin-top: 20px;
+}
+
+.cabecalho p {
+  margin: 5px;
+}
+
+/* PROJETOS
+-------------------------------------------- */
+.projetos {
+  margin-top: 20%;
+  width: 100%;
+}
+
+.projetos ul {
+  width: 100%;
+
+  list-style: none;
+  list-style-type: none;
+}
+
+.projetos ul li {
+  margin-bottom: 30px;
+}
+
+.projetos ul li h1 {
+  font: 500 2rem "Montserrat", sans-serif;
+  text-align: left;
+  margin-bottom: 0.9rem;
+}
+
+.projetos ul li img {
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  transform: scale(0.97);
+  transition: all 0.3s ease;
+}
+.projetos ul li img:hover {
+  transform: scale(1);
+}
+
+/* RODAPÉ
+-------------------------------------------- */
+.rodape {
+  text-align: center;
+  margin: 60px 0px 10px 0px;
+}
+
+/* OUTROS
+-------------------------------------------- */
+hr {
+  border: 1px solid var(--color-hr);
+  margin: 5px 0;
+  border-radius: 2px;
+  transition: border 0.3s;
+}
+
+/* TEMA
+-------------------------------------------- */
+#tema {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+}
